@@ -30,6 +30,7 @@ Designed for quick note-taking, documentation, and report writing without interr
 
 
 # Project Structure
+```text
 doced/
 │
 ├── gui.py              
@@ -73,20 +74,24 @@ doced/
             Editor Ready
                  │
                  ▼
+## Normal Operation
+
+```text
 ═══════════════════════════════════════════════════════════════
                     NORMAL OPERATION
 ═══════════════════════════════════════════════════════════════
+
                  │
                  ▼
         Wait for mouse long press
                  │
         ┌────────┴────────┐
         │                 │
-   Left Button        Right Button
+   Left Button       Right Button
         │                 │
         ▼                 ▼
- Copy selected text    Copy selected text
- (Ctrl+C simulated)    (Ctrl+C simulated)
+Copy selected text  Copy selected text
+(Ctrl+C simulated)  (Ctrl+C simulated)
         │                 │
         ▼                 ▼
  Read clipboard      Read clipboard
@@ -94,14 +99,15 @@ doced/
         ▼                 ▼
  Open Format Menu    Open Action Menu
         │
-        ├────────────────────────────────────────────┐
-        │                                            │
-        ▼                                            ▼
-   Formatting Commands                      Document Commands
-        │                                            │
-        ├─ Heading H1-H6                             ├─ Save
-        ├─ Paragraph                                ├─ View
-        ├─ Bullet                                   ├─ Open
-        ├─ Hyperlink                                ├─ Undo
-        └─ Screenshot                               ├─ Redo
-                                                     └─ Quit
+        ├──────────────────────────────────────┐
+        │                                      │
+        ▼                                      ▼
+Formatting Commands                   Document Commands
+        │                                      │
+        ├─ Heading H1-H6                       ├─ Save
+        ├─ Paragraph                           ├─ View
+        ├─ Bullet                              ├─ Open
+        ├─ Hyperlink                           ├─ Undo
+        └─ Screenshot                          ├─ Redo
+                                               └─ Quit
+```
