@@ -58,7 +58,7 @@ doced/
                  Initialize System Tray + Mouse Listener
                                       │
                                       ▼
-                     cache/cache.json exists?
+                         cache/cache.json exists?
                          │                     │
                       Yes                     No
                          │                     │
