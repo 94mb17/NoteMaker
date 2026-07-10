@@ -76,7 +76,7 @@ doced/
             Editor Ready
                  │
                  ▼
-```
+
 
 ## Normal Operation
 ```text
