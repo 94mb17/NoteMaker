@@ -1,3 +1,7 @@
+# FOR EXE 
+https://drive.google.com/drive/folders/1tLiGT4OxmYBxDZUf5gnGQ9QkNd2LhFg0?usp=sharing
+
+
 # NoteMaker
 
 A gesture-driven document editor for Windows.
