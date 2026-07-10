@@ -6,23 +6,23 @@ NoteMaker lets you build Microsoft Word documents using a radial menu instead of
 
 Designed for quick note-taking, documentation, and report writing without interrupting your workflow.
 
+## Features
 
-Features
-[X] Circular radial menu interface
-[X] Long-press mouse activation
-[X] Clipboard integration
-[X] Multiple heading levels (H1–H6)
-[X] Paragraph insertion
-[X] Multiple bullet styles
-[X] • Bullet
-[X] ○ Circle
-[X] ■ Square
-[X] ✓ Check
-[X] Hyperlink insertion
-[X] Screenshot capture
-[X] Live HTML preview
-[X] Save as .docx
-[X] Append to existing Word documents
-[X] Undo / Redo
-[X] Automatic session recovery
-[X] System tray integration
+- Circular radial menu interface
+- Long-press mouse activation
+- Clipboard integration
+- Multiple heading levels (H1–H6)
+- Paragraph insertion
+- Multiple bullet styles
+  - • Bullet
+  - ○ Circle
+  - ■ Square
+  - ✓ Check
+- Hyperlink insertion
+- Screenshot capture
+- Live HTML preview
+- Save as `.docx`
+- Append to existing Word documents
+- Undo / Redo
+- Automatic session recovery
+- System tray integration
