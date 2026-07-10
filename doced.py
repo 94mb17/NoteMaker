@@ -268,9 +268,6 @@ class WordRenderer:
 
         symbol = block.get("symbol", "bullet")
 
-        # Word/python-docx has no native glyph swap for a plain paragraph
-        # style, so circle/square/check all ride on the standard bullet
-        # list style rather than falling back to an un-bulleted paragraph.
         styles = {
             "bullet": "List Bullet",
             "number": "List Number",
