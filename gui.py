@@ -686,18 +686,7 @@ def do_insert_image():
 
 
 # _______________________SECTORS_______________________
-#
-# A sector may either carry a direct "command" (a leaf action), or a
-# "submenu" list of leaf sector-defs. Sectors with a submenu never run a
-# command themselves — selecting them cascades a new radial ring outward
-# instead of closing the popup.
-#
-# The full action set is now split across two independent menus that open
-# on different mouse buttons: LEFT_SECTOR_DEFS is the quick-formatting set
-# (Heading / Bullet / Screenshot), RIGHT_SECTOR_DEFS is everything else
-# (document/file actions + history). Both lists are built from the same
-# leaf command functions below, so behavior is identical to before — only
-# which items are grouped under which trigger has changed.
+
 
 LEFT_SECTOR_DEFS = [
     {
@@ -806,16 +795,8 @@ SIDE_THEME = {
 }
 
 
-# ---------------- Radial (donut wedge) menu — "Command Wheel" style ----------------
-#
-# Complete rebuild of the popup replacing the old orbit/node design with a
-# concentric pie-wedge wheel: a fixed center hub with title/subtitle text
-# and a back chevron, surrounded by one or more full-circle rings of donut
-# wedges. Selecting a wedge with children doesn't move or reopen the popup
-# — it grows a new ring around the same center, and the chosen wedge stays
-# gold-highlighted as a breadcrumb while its children populate the new
-# outer ring. The widget is sized once up front (deep enough for the
-# tree's max depth) so nothing ever resizes or re-centers while open.
+# ____________________ Radial Menu ____________________
+
 
 WEDGE_PALETTE = {
     "fill": QColor(22, 26, 33, 235),
@@ -841,9 +822,9 @@ ACCENT_BY_THEME = {
     "grey": QColor("#c9c9cc"),
 }
 
-HUB_R = 58            # radius of the center hub
-RING_BW = 78           # width (radial thickness) of each wedge ring
-WEDGE_MARGIN = 26      # breathing room outside the outermost ring
+HUB_R = 58           
+RING_BW = 78           
+WEDGE_MARGIN = 26     
 
 
 class RadialMenu(QWidget):
@@ -890,7 +871,6 @@ class RadialMenu(QWidget):
 
         self._update_hub_text()
 
-    # ---------------- geometry / data helpers ----------------
 
     def _max_depth(self, items):
         depth = 1
@@ -923,7 +903,6 @@ class RadialMenu(QWidget):
             self.title_text = self.root_title
             self.subtitle_text = self.root_subtitle
 
-    # ---------------- hit testing ----------------
 
     def _hit_test(self, x, y):
         dx = x - self.center
@@ -948,7 +927,6 @@ class RadialMenu(QWidget):
 
         return ("outside", None, None)
 
-    # ---------------- rendering ----------------
 
     def _wedge_path(self, r_inner, r_outer, start_deg, span_deg):
         c = self.center
@@ -1070,7 +1048,6 @@ class RadialMenu(QWidget):
 
         self._paint_hub(painter)
 
-    # ---------------- interaction ----------------
 
     def _select(self, ring_index, item_index):
         item = self.rings[ring_index][item_index]
@@ -1294,12 +1271,7 @@ def do_copy_and_show_popup(side):
 
 
 # ______________________________START____________________________
-#
-# Both buttons follow the exact same opening rule as before — press and
-# hold for LONG_PRESS_DURATION seconds without moving off — just tracked
-# independently per button so a left long-press and a right long-press
-# don't interfere with each other. Which button fired determines which
-# sector list / theme show_popup uses.
+
 
 BUTTON_SIDE = {
     mouse.Button.left: "left",
