@@ -30,7 +30,6 @@ Designed for quick note-taking, documentation, and report writing without interr
 
 
 # Project Structure
-```text
 doced/
 │
 ├── gui.py              
@@ -76,7 +75,6 @@ doced/
                  ▼
 ## Normal Operation
 
-```text
 ═══════════════════════════════════════════════════════════════
                     NORMAL OPERATION
 ═══════════════════════════════════════════════════════════════
